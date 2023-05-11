@@ -1,0 +1,66 @@
+from register_virtual_stack import Register_Virtual_Stack_MT
+from ij.io import DirectoryChooser
+from os import path, listdir
+import os
+
+dir = DirectoryChooser ("enter the input directory")
+folder = dir.getDirectory()
+print (folder)
+
+#iterate through sample numbers
+for sampleNames in listdir(folder):
+
+	#make sure it's a directory
+	if path.isdir(folder + sampleNames):
+	
+		# source directory
+		source_dir = folder + sampleNames + "/rgb/"
+
+		# if source directory exists, proceed. Otherwise, skip it and print a note
+		if path.isdir(source_dir):
+		
+			# output directory
+			target_dir = folder + sampleNames + "/stacked/"
+			if not path.exists(target_dir) and not path.isdir(target_dir):
+				os.mkdir(target_dir)
+			#print(target_dir)
+			
+				
+			# transforms directory (not needed)
+			#transf_dir = folder + sampleNames + "/stacked/transform/"
+			#if not path.exists(transf_dir) and not path.isdir(transf_dir):
+			#	os.mkdir(transf_dir)
+			# reference image
+		
+			print (sampleNames)
+			reference_name = listdir(folder + sampleNames + "/rgb/")
+			
+			for filename in listdir(folder + sampleNames +"/rgb/"):
+				if filename.find("nopol") != -1:		
+					reference_name = filename
+			
+			print(reference_name)
+			
+			# shrinkage option (false)
+			use_shrinking_constraint = 0
+			
+			p = Register_Virtual_Stack_MT.Param()
+			# The "maximum image size":
+			p.sift.maxOctaveSize = 1024
+			# The "inlier ratio":
+			p.minInlierRatio = 0.05
+			# Detect features using an affine model
+			p.featuresModelIndex = 3
+			# Use moving least squares to align
+			# Note that technically a rigid transformation should be used
+			# but the cpl images are sufficiently different, so the nopol image is used as a reference
+			p.registrationModelIndex = 5
+			# The maxiumum error in alignment. Lower means better alignment, but if too low, then the alignment fails
+			#p.maxEpsilon = 3
+			
+			
+			Register_Virtual_Stack_MT.exec(source_dir, target_dir, None, 
+			reference_name, p, use_shrinking_constraint)
+
+		else:
+			print (sampleNames + "skipped because rgb folder does not exist")
