@@ -1,0 +1,115 @@
+Standard Operating Procedure for scanning thin sections using VueScan
+Last revised: 2023-05-12
+Written by Chris Walli, with contributions from Derek D.V. Leung
+
+Scanning Thin Sections With VueScan:
+
+1. Press the on button on the front of the scanner.
+2. Start the VueScan software on the computer desktop.
+3. If you experience any issues either restart the software or turn on the scanner again.
+4. Put a polarizer on the bottom and on the top with the thin section in the middle for cross polarized scans, and put
+the glass piece on the bottom and the polarizer on the top with the thin section in the middle for the plain polarized
+scans.
+5. The settings should be saved from last time the scanner was used, and would most
+likely not need to be changed. If you think they have changed keep note of the
+settings below.
+  
+For the Input Tab Set the Settings to the Following:
+
+	-Options: professional
+	-Task: scan to file
+	-Source: opticfilm 8200i
+	-Media: image
+	-Bits Per Pixel: 48 bit RGB
+	-Preview Resolution: auto
+	-Scan Resolution: 7200 dpi
+	-Rotation: none
+	-Auto Save: scan
+	-Auto Print: none
+	-Auto Repeat: none
+	-Number of Passes: the more passes you have, the more the quality of the image goes up but
+        after a while you do not notice a difference. 2 seems to work great
+	-Default Folder: name the path of the folder that you want to save the image in, ex C:\users\MAC\pictures\andy-pts
+	-TIFF File Name: here you set what you want the file to be named as ex: example1.tif
+	Other settings that are not mentioned are to be turned off
+
+Crop Tab Settings:
+
+	-Crop Size: manual
+	-X Size: 35.867
+	-Y Size: 25.947
+	-Auto Offset: off
+	-x, y Offset: 0
+	-Show Multi Outline: on
+	-Lock Aspect Ratio: off
+	-Border %: 0
+	-Buffer%: 8
+	-Preview Area: default
+	-Default Options: unchecked
+
+For filter tab nothing is set exept for sharpen being set to light.
+
+For Colour Tab:
+
+	-Colour Balance: none
+	-Curve Low: 0.25
+	-Curve High: 0.75
+	-Brightness Red: 1
+
+	-Brightness of Red, Green, Blue: should be set so one is near one and the red green and blue graph lines
+        are close to each other
+
+	-Scanner Colour Space: default
+	-Printer, Output, Monitor Colour Space: all set to sRGB
+	-View Colour: RGB
+
+Output Tab:
+
+	-Default Folder: same path to folder as in first tab
+	-TIFF File: checked
+	-TIFF File Name: set same as input tab like time.tif
+	-TIFF Size Reduction: 1
+	-TIFF Multi Page: off
+	-TIFF File Type: 48 bit RGB
+	-TIFF Compression: off
+	-Next only TIFF profile is checked
+	-Printed Size: scan size
+	-Magnification: 100%
+The rest after this in the output tab is not filled in except-
+	-Center Captions: checked
+	-Log File: on
+	-Log File Max Size: 2 mb
+
+Prefs Tab:
+
+	-Language: Default
+	-Font Size: 12
+	-Both crop units and printed units:mm
+	-Viewer: default
+	-Auto Load Captions: on
+	-Graph Type: image
+	-Button Actions: not set
+	-Histogram Type: linear
+
+	-Display raw scan, Splash screen, Animate crop box, Thick crop box, Add extensions, Substitute date,
+        Warn on overwrite, Warn on not ready, Warn on no scanner, Anti alias text, Anti alias image, Enable sliders,
+        Enable spin buttons, Enable popup tips, Windows maximized: All checked
+
+	-Beep When Done: 0
+	-Disable Scanners: none
+	-Network Scanners: mDNS
+	-Calibration Period: 30
+	-Image Memory: 2048
+	-Window x Offset: 946
+	-Window y Offset: 0
+	-Window x Size: 974
+	-Window y Size: 1040
+
+6. Press preview to see what the scan is generally going to look like.
+7. If you find it needs calibration you can find this under the scanner menu at the top of the program.
+8. Adjust RGB colours so that one colour is around one and the others are adjusted so that they line up in the histogram.
+9. If you are satisfied, press the scan button.
+10. To find your image once it is saved look in the folder that you set the default folder to be. If you forget what
+the default folder is called you can find the name of the folder in the output tab of the VueScan software.
+	
+	
