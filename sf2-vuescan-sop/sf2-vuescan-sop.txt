@@ -7,14 +7,18 @@ Scanning Thin Sections With VueScan:
 1. Press the on button on the front of the scanner.
 2. Start the VueScan software on the computer desktop.
 3. If you experience any issues either restart the software or turn on the scanner again.
-4. Put a polarizer on the bottom and on the top with the thin section in the middle for cross polarized scans, and put
-the glass piece on the bottom and the polarizer on the top with the thin section in the middle for the plain polarized
-scans.
+4. 
+   a) For non-polarized light scans, put thin section in holder without any polarizers.
+   b) For plane-polarized light scans, put thin section in holder and then a linear polarizer on top of the holder.
+   c) For circularly polarized light scans, put bottom circular polarizer in the bottom chamber, then thin section, and finally the top circular polarizer.
+      Be mindful of the directions of the circular polarizers (the linear polarizer component should be on the outside, whereas the quarter wave plate should be on the inside).
+   d) For cross-polarized light scans, put a linear polarizer on the bottom chamber, then thin section, then linear polarizer on top.
+
 5. The settings should be saved from last time the scanner was used, and would most
 likely not need to be changed. If you think they have changed keep note of the
 settings below.
   
-For the Input Tab Set the Settings to the Following:
+For the Input Tab Set the Settings to the following:
 
 	-Options: professional
 	-Task: scan to file
