@@ -1,17 +1,26 @@
+Copyright (C) 2023
+Chris Walli
+Derek Leung <derekdvleung@gmail.com>
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License
+version 3 as published by the Free Software Foundation. This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See 
+the GNU General Public License for more details. You should have received a copy of the GNU General Public License along 
+with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 Standard Operating Procedure for scanning thin sections using VueScan
-Last revised: 2023-05-12
+Last revised: 2023-05-20
 Written by Chris Walli, with contributions from Derek D.V. Leung
 
 Scanning Thin Sections With VueScan:
 
 1. Press the on button on the front of the scanner.
 2. Start the VueScan software on the computer desktop.
-3. If you experience any issues either restart the software or turn on the scanner again.
+3. If you experience any issues either restart the software or turn on the scanner again. Also try Scanner -> Find Scanner or press F12 to detect the scanner.
 4. 
-   a) For non-polarized light scans, put thin section in holder without any polarizers.
+   a) For non-polarized light scans, put thin section in 2.4 mm holder without any polarizers.
    b) For plane-polarized light scans, put thin section in holder and then a linear polarizer on top of the holder.
-   c) For circularly polarized light scans, put bottom circular polarizer in the bottom chamber, then thin section, and finally the top circular polarizer.
-      Be mindful of the directions of the circular polarizers (the linear polarizer component should be on the outside, whereas the quarter wave plate should be on the inside).
+   c) For circularly polarized light scans, put bottom circular polarizer in the bottom chamber of the 2.6/2.7 mm holder, then thin section, and finally the top circular polarizer.
+      Be mindful of the directions of the circular polarizers (the linear polarizer component should be on the outside, whereas the quarter wave-plate should be on the inside).
    d) For cross-polarized light scans, put a linear polarizer on the bottom chamber, then thin section, then linear polarizer on top.
 
 5. The settings should be saved from last time the scanner was used, and would most
@@ -40,8 +49,8 @@ For the Input Tab Set the Settings to the following:
 Crop Tab Settings:
 
 	-Crop Size: manual
-	-X Size: 35.867
-	-Y Size: 25.947
+	-X Size: 35.867 (Approximate size of a standard thin section. May need to adjust.)
+	-Y Size: 25.947 (Approximate size of a standard thin section. May need to adjust.)
 	-Auto Offset: off
 	-x, y Offset: 0
 	-Show Multi Outline: on
@@ -51,17 +60,18 @@ Crop Tab Settings:
 	-Preview Area: default
 	-Default Options: unchecked
 
-For filter tab nothing is set exept for sharpen being set to light.
+For filter tab nothing is set except for sharpen being set to light.
 
 For Colour Tab:
 
-	-Colour Balance: none
-	-Curve Low: 0.25
-	-Curve High: 0.75
-	-Brightness Red: 1
+	-Colour Balance: auto levels
+	-Black point: 0%
+	-White point: 0%
+	-this ensures that the brightest pixels are mapped as the maximum image value and the darkest as the lowest value.
 
 	-Brightness of Red, Green, Blue: should be set so one is near one and the red green and blue graph lines
         are close to each other
+		The polarizer seems to preferentially allow red, so the blue and green values should be higher.
 
 	-Scanner Colour Space: default
 	-Printer, Output, Monitor Colour Space: all set to sRGB
@@ -110,8 +120,10 @@ Prefs Tab:
 	-Window y Size: 1040
 
 6. Press preview to see what the scan is generally going to look like.
-7. If you find it needs calibration you can find this under the scanner menu at the top of the program.
+7. If you find it needs calibration you can find this under the scanner menu at the top of the program. 
+(Although generally we find that the calibration button doesn't do much and can stall the scanner on occasion.)
 8. Adjust RGB colours so that one colour is around one and the others are adjusted so that they line up in the histogram.
+(Update: Color -> Auto levels does a good job of balancing the RGB colors.)
 9. If you are satisfied, press the scan button.
 10. To find your image once it is saved look in the folder that you set the default folder to be. If you forget what
 the default folder is called you can find the name of the folder in the output tab of the VueScan software.
