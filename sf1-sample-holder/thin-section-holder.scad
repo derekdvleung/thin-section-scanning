@@ -5,7 +5,7 @@
 
 // thin-section dimensions
 ptsLength = 47; //77;//long section
-ptsWidth = 28;
+ptsWidth = 28;// standard 28
 
 // holder dimensions
 holderLength = 130; //170;//long section
